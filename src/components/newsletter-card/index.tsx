@@ -25,8 +25,13 @@ export function NewsletterCard({ newsletter }: NewsletterCardProps) {
 
   return (
     <Card className="h-full flex flex-col overflow-hidden">
-      <div className="w-full relative object-cover h-[50vw] sm:h-[200px]">
-        <Image src={newsletter.image} alt={newsletter.title} fill />
+      <div className="relative w-full min-h-64 sm:min-h-48">
+        <Image
+          src={newsletter.image}
+          alt={newsletter.title}
+          fill
+          style={{ objectFit: "cover" }}
+        />
       </div>
       <CardHeader className="flex-1">
         <CardTitle>{newsletter.title}</CardTitle>
